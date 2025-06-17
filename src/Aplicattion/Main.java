@@ -2,6 +2,7 @@ package Aplicattion;
 
 import DB.DbException;
 import DB.db;
+import Model.Entities.Department;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,6 +16,9 @@ public class Main {
         Connection conn = null;
         Statement st = null;
         ResultSet rs = null;
+
+        Department obj = new Department(1, "Books");
+        System.out.println(obj);
 
 
     }
