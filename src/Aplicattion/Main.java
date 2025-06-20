@@ -15,12 +15,9 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("=== TEST 1: Seller find by id ===");
         SellerDao sellerdao = DaoFactory.createSellerDao();
         Seller seller = sellerdao.findById(3);
         System.out.println(seller);
-
-
-
-
     }
 }
