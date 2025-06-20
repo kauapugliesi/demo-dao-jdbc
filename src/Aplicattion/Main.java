@@ -8,6 +8,7 @@ import Model.Entities.Department;
 import Model.Entities.Seller;
 
 import java.util.Date;
+import java.util.List;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -19,5 +20,12 @@ public class Main {
         SellerDao sellerdao = DaoFactory.createSellerDao();
         Seller seller = sellerdao.findById(3);
         System.out.println(seller);
+
+        System.out.println("\n=== TEST 2: Seller find by Department ===");
+        Department dep = new Department(2, null);
+        List<Seller> list = sellerdao.findByDepartment(dep);
+        for (Seller s : list){
+            System.out.println(s);
+        }
     }
 }
