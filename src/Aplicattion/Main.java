@@ -9,12 +9,15 @@ import Model.Entities.Seller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("=== TEST 1: Seller find by id ===");
         SellerDao sellerdao = DaoFactory.createSellerDao();
@@ -44,5 +47,12 @@ public class Main {
         seller.setName("Martha Waine");
         sellerdao.update(seller);
         System.out.println("Update completed");
+
+        System.out.println("\n=== TEST 6: Seller Delete ===");
+        System.out.println("Enter the item id to delte: ");
+        int id = sc.nextInt();
+        sellerdao.DeleteById(id);
+
+        sc.close();
     }
 }
