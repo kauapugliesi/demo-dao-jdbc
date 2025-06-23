@@ -53,6 +53,7 @@ public class Main {
         int id = sc.nextInt();
         sellerdao.DeleteById(id);
 
+
         sc.close();
     }
 }
